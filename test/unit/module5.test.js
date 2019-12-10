@@ -1,4 +1,4 @@
-const { 
+const {
   footer, footerAfter, lists,
   linkHeader, footerLinks, footerLinksHover,
   socialLists, socialListsLinks, twitter,
@@ -33,7 +33,7 @@ describe('Footer', () => {
   it(`\`main.css\` should contain the classes, \`${declarations.lists.selector}\`, and \`${declarations.linkHeader.selector}\`, they should be used in \`index.html\` @link-class-attributes`, () => {
     assert(lists.class, 'The `.lists` class should exist before it can be used in the HTML.');
     assert(linkHeader.class, 'The `.link-header` class should exist before it can be used in the HTML.');
-    assert($('footer > section:first-child').hasClass(lists.class),'The first `<section>` in the `<footer>` does not have a class of `lists`.');
+    assert($('footer > section:first-child').hasClass(lists.class), 'The first `<section>` in the `<footer>` does not have a class of `lists`.');
     assert($('footer > section:nth-child(1) > div:nth-child(1) > div:nth-child(1)').hasClass(linkHeader.class),
       'The `<div>` in the `<footer>` that has the contents `Customer Support` does not have the `link-header` class.');
     assert($('footer > section:nth-child(1) > div:nth-child(2) > div:nth-child(1)').hasClass(linkHeader.class),
@@ -42,7 +42,7 @@ describe('Footer', () => {
       'The `<div>` in the `<footer>` that has the contents `Privacy &amp; Terms` does not have the `link-header` class.');
     assert($('footer > section:nth-child(1) > div:nth-child(4) > div:nth-child(1)').hasClass(linkHeader.class),
       'The `<div>` in the `<footer>` that has the contents `Follow Us` does not have the `link-header` class.');
-    
+
   });
 
   it(`\`main.css\` should contain rules with the selectors, \`${declarations.socialLists.selector}\`, and \`${declarations.socialListsLinks.selector}\` @social-links`, () => {
